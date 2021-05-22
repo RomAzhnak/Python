@@ -20,5 +20,10 @@ print(hash('a') & 7)
 def print_hi(name):
     print(f'Hi, {name}')
 
+import collections
+d = collections.deque()
+for i in range(3, 33): d.append('e%d' % i)  # добавить e3 - e32
+print(d)
+print(d[0])
 
 print_hi('Rom')
