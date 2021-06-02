@@ -1,0 +1,11 @@
+with open('input.txt', 'r', encoding='utf-8') as f:
+    n, m = map(int, f.readline().split())
+    t = tuple(map(lambda s: int(s), f.readlines()))
+an = set(t[:n])
+boris = set(t[n:])
+print(len(an & boris))
+print(*sorted(an & boris))
+print(len(an-boris))
+print(*sorted(an-boris))
+print(len(boris-an))
+print(*sorted(boris-an))
