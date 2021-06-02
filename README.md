@@ -1,2 +1,3 @@
 # Python
-Config files for my GitHub profile.
+```
+Files for my GitHub.
