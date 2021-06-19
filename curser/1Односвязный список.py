@@ -1,5 +1,5 @@
 # https://stackabuse.com/linked-lists-in-detail-with-python-examples-single-linked-lists/
-'''
+
 class Node:
     def __init__(self, data):
         self.item = data
@@ -286,7 +286,7 @@ for current_item in [node1, node2, item3, node4]:
     track.add_list_item(current_item)
     print("track length: %i" % track.list_length())
     track.output_list()
-'''
+
 
 
 # третий вариант

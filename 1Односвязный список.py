@@ -286,3 +286,56 @@ for current_item in [node1, node2, item3, node4]:
     track.add_list_item(current_item)
     print("track length: %i" % track.list_length())
     track.output_list()
+
+
+
+# третий вариант
+class LinkedList:
+    def __init__(self):
+        self._begin = None
+
+    def add_item(self, data):
+        self._begin = [data, self._begin]
+
+    def pop_item(self):
+        if self._begin:
+            data = self._begin[0]
+            self._begin = self._begin[1]
+            return data
+        else:
+            return 'Список пуст'
+
+    def list_print(self):
+        if self._begin:
+            item = self._begin
+            while item:
+                print(item[0], end=' ')
+                item = item[1]
+            print()
+        else:
+            print('Список пуст')
+
+    def clear(self):
+        self.__init__()
+
+    def __str__(self):
+        if self._begin:
+            return str(self._begin[0])
+        else:
+            return 'Список пуст'
+
+
+if __name__ == '__main__':
+
+    a = LinkedList()
+    print(a)
+    a.add_item(5)
+    a.add_item(10)
+    a.add_item(15)
+    a.list_print()
+    print(a)
+    print(a.pop_item())
+    print(a)
+    print(a.pop_item())
+    print(a.pop_item())
+    print(a.pop_item())
